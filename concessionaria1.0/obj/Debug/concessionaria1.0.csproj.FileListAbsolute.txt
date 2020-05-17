@@ -1,0 +1,25 @@
+C:\Users\igor\source\repos\concessionaria1.0\concessionaria1.0\bin\Debug\concessionaria1.0.exe.config
+C:\Users\igor\source\repos\concessionaria1.0\concessionaria1.0\bin\Debug\concessionaria1.0.exe
+C:\Users\igor\source\repos\concessionaria1.0\concessionaria1.0\bin\Debug\concessionaria1.0.pdb
+C:\Users\igor\source\repos\concessionaria1.0\concessionaria1.0\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\igor\source\repos\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1._0.Form1.resources
+C:\Users\igor\source\repos\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1._0.Properties.Resources.resources
+C:\Users\igor\source\repos\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1.0.csproj.GenerateResource.cache
+C:\Users\igor\source\repos\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1.0.csproj.CoreCompileInputs.cache
+C:\Users\igor\source\repos\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1.0.csproj.CopyComplete
+C:\Users\igor\source\repos\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1.0.exe
+C:\Users\igor\source\repos\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1.0.pdb
+C:\Users\igor\source\repos\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1.0.csprojAssemblyReference.cache
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\bin\Debug\concessionaria1.0.exe.config
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\bin\Debug\concessionaria1.0.exe
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\bin\Debug\concessionaria1.0.pdb
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\bin\Debug\Mono.Security.dll
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\bin\Debug\Npgsql.dll
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1.0.csprojAssemblyReference.cache
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1._0.Properties.Resources.resources
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1.0.csproj.GenerateResource.cache
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1.0.csproj.CoreCompileInputs.cache
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1.0.csproj.CopyComplete
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1.0.exe
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1.0.pdb
+C:\Users\silva\OneDrive\Área de Trabalho\concessionaria1.0\concessionaria1.0\obj\Debug\concessionaria1._0.btnListar.resources
