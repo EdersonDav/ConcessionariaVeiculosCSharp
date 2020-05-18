@@ -1,6 +1,6 @@
 ﻿namespace concessionaria1._0
 {
-    partial class btnListar
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnListar));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.formHome = new ns1.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnImagem = new ns1.BunifuImageButton();
             this.txtUsuario = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -44,8 +44,8 @@
             this.btnSair = new ns1.BunifuFlatButton();
             this.btnExcluir = new ns1.BunifuFlatButton();
             this.btnAtualizar = new ns1.BunifuFlatButton();
-            this.bntCadastrar = new ns1.BunifuFlatButton();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCadastrar = new ns1.BunifuFlatButton();
+            this.sidePanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtPreco = new ns1.BunifuMaterialTextbox();
             this.txtAno = new ns1.BunifuMaterialTextbox();
@@ -60,7 +60,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel2 = new ns1.BunifuCustomLabel();
             this.dtGrid = new ns1.BunifuCustomDataGrid();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bunifuCustomLabel3 = new ns1.BunifuCustomLabel();
+            this.btnCarregar = new ns1.BunifuFlatButton();
+            this.btnLimpar = new ns1.BunifuFlatButton();
+            this.bunifuSeparator1 = new ns1.BunifuSeparator();
+            this.bunifuSeparator2 = new ns1.BunifuSeparator();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnImagem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -69,12 +74,13 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuElipse1
+            // formHome
             // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
+            this.formHome.ElipseRadius = 35;
+            this.formHome.TargetControl = this;
             // 
             // panel1
             // 
@@ -175,9 +181,9 @@
             this.panel2.Controls.Add(this.btnSair);
             this.panel2.Controls.Add(this.btnExcluir);
             this.panel2.Controls.Add(this.btnAtualizar);
-            this.panel2.Controls.Add(this.bntCadastrar);
+            this.panel2.Controls.Add(this.btnCadastrar);
             this.panel2.Controls.Add(this.btnPesquisa);
-            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.sidePanel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
@@ -186,7 +192,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
+            this.btnSair.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.btnSair.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
             this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -220,10 +226,11 @@
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSair.Textcolor = System.Drawing.Color.White;
             this.btnSair.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
+            this.btnExcluir.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.btnExcluir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
             this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -257,10 +264,11 @@
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnExcluir.Textcolor = System.Drawing.Color.White;
             this.btnExcluir.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
+            this.btnAtualizar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.btnAtualizar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
             this.btnAtualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -294,53 +302,54 @@
             this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAtualizar.Textcolor = System.Drawing.Color.White;
             this.btnAtualizar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
-            // bntCadastrar
+            // btnCadastrar
             // 
-            this.bntCadastrar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
-            this.bntCadastrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.bntCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
-            this.bntCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bntCadastrar.BorderRadius = 0;
-            this.bntCadastrar.ButtonText = "Cadastrar";
-            this.bntCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bntCadastrar.DisabledColor = System.Drawing.Color.Gray;
-            this.bntCadastrar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntCadastrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.bntCadastrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("bntCadastrar.Iconimage")));
-            this.bntCadastrar.Iconimage_right = null;
-            this.bntCadastrar.Iconimage_right_Selected = null;
-            this.bntCadastrar.Iconimage_Selected = null;
-            this.bntCadastrar.IconMarginLeft = 0;
-            this.bntCadastrar.IconMarginRight = 0;
-            this.bntCadastrar.IconRightVisible = true;
-            this.bntCadastrar.IconRightZoom = 0D;
-            this.bntCadastrar.IconVisible = true;
-            this.bntCadastrar.IconZoom = 47D;
-            this.bntCadastrar.IsTab = false;
-            this.bntCadastrar.Location = new System.Drawing.Point(13, 118);
-            this.bntCadastrar.Margin = new System.Windows.Forms.Padding(4);
-            this.bntCadastrar.Name = "bntCadastrar";
-            this.bntCadastrar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
-            this.bntCadastrar.OnHovercolor = System.Drawing.Color.Transparent;
-            this.bntCadastrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.bntCadastrar.selected = false;
-            this.bntCadastrar.Size = new System.Drawing.Size(183, 31);
-            this.bntCadastrar.TabIndex = 2;
-            this.bntCadastrar.Text = "Cadastrar";
-            this.bntCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bntCadastrar.Textcolor = System.Drawing.Color.White;
-            this.bntCadastrar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntCadastrar.Click += new System.EventHandler(this.bntCadastrar_Click);
+            this.btnCadastrar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.btnCadastrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
+            this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCadastrar.BorderRadius = 0;
+            this.btnCadastrar.ButtonText = "Cadastrar";
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Iconimage")));
+            this.btnCadastrar.Iconimage_right = null;
+            this.btnCadastrar.Iconimage_right_Selected = null;
+            this.btnCadastrar.Iconimage_Selected = null;
+            this.btnCadastrar.IconMarginLeft = 0;
+            this.btnCadastrar.IconMarginRight = 0;
+            this.btnCadastrar.IconRightVisible = true;
+            this.btnCadastrar.IconRightZoom = 0D;
+            this.btnCadastrar.IconVisible = true;
+            this.btnCadastrar.IconZoom = 47D;
+            this.btnCadastrar.IsTab = false;
+            this.btnCadastrar.Location = new System.Drawing.Point(13, 118);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
+            this.btnCadastrar.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCadastrar.selected = false;
+            this.btnCadastrar.Size = new System.Drawing.Size(183, 31);
+            this.btnCadastrar.TabIndex = 2;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCadastrar.Textcolor = System.Drawing.Color.White;
+            this.btnCadastrar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // panel3
+            // sidePanel
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel3.Location = new System.Drawing.Point(4, 118);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(6, 31);
-            this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.sidePanel.Location = new System.Drawing.Point(4, 118);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(6, 31);
+            this.sidePanel.TabIndex = 2;
+            this.sidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel4
             // 
@@ -380,7 +389,6 @@
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(192, 33);
             this.txtPreco.TabIndex = 15;
-            this.txtPreco.Text = "Insira o preço do veiculo";
             this.txtPreco.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtAno
@@ -400,7 +408,6 @@
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(192, 33);
             this.txtAno.TabIndex = 14;
-            this.txtAno.Text = "Insira o ano de frabricação";
             this.txtAno.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtModelo
@@ -420,7 +427,6 @@
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(192, 33);
             this.txtModelo.TabIndex = 13;
-            this.txtModelo.Text = "Insira o modelo do  veiculo";
             this.txtModelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel9
@@ -460,7 +466,6 @@
             this.txtFabricante.Name = "txtFabricante";
             this.txtFabricante.Size = new System.Drawing.Size(192, 33);
             this.txtFabricante.TabIndex = 9;
-            this.txtFabricante.Text = "Insira o fabricante";
             this.txtFabricante.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtPlaca
@@ -480,8 +485,8 @@
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(192, 33);
             this.txtPlaca.TabIndex = 8;
-            this.txtPlaca.Text = "Insira a placa do veiculo";
             this.txtPlaca.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPlaca.OnValueChanged += new System.EventHandler(this.txtPlaca_OnValueChanged);
             // 
             // bunifuCustomLabel6
             // 
@@ -535,46 +540,165 @@
             // 
             // dtGrid
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
             this.dtGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Honeydew;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGrid.DoubleBuffered = true;
             this.dtGrid.EnableHeadersVisualStyles = false;
-            this.dtGrid.HeaderBgColor = System.Drawing.Color.Honeydew;
-            this.dtGrid.HeaderForeColor = System.Drawing.Color.Honeydew;
+            this.dtGrid.GridColor = System.Drawing.Color.DimGray;
+            this.dtGrid.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.dtGrid.HeaderForeColor = System.Drawing.Color.White;
             this.dtGrid.Location = new System.Drawing.Point(206, 252);
             this.dtGrid.Name = "dtGrid";
             this.dtGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtGrid.Size = new System.Drawing.Size(641, 231);
             this.dtGrid.TabIndex = 3;
             // 
-            // button1
+            // bunifuCustomLabel3
             // 
-            this.button1.Location = new System.Drawing.Point(221, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Listar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(227, 71);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(260, 24);
+            this.bunifuCustomLabel3.TabIndex = 4;
+            this.bunifuCustomLabel3.Text = "Listar veiculos registrado ";
             // 
-            // btnListar
+            // btnCarregar
+            // 
+            this.btnCarregar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.btnCarregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCarregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
+            this.btnCarregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCarregar.BorderRadius = 0;
+            this.btnCarregar.ButtonText = "Carregar";
+            this.btnCarregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCarregar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCarregar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarregar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCarregar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCarregar.Iconimage")));
+            this.btnCarregar.Iconimage_right = null;
+            this.btnCarregar.Iconimage_right_Selected = null;
+            this.btnCarregar.Iconimage_Selected = null;
+            this.btnCarregar.IconMarginLeft = 0;
+            this.btnCarregar.IconMarginRight = 0;
+            this.btnCarregar.IconRightVisible = true;
+            this.btnCarregar.IconRightZoom = 0D;
+            this.btnCarregar.IconVisible = true;
+            this.btnCarregar.IconZoom = 40D;
+            this.btnCarregar.IsTab = false;
+            this.btnCarregar.Location = new System.Drawing.Point(227, 131);
+            this.btnCarregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCarregar.Name = "btnCarregar";
+            this.btnCarregar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
+            this.btnCarregar.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btnCarregar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCarregar.selected = false;
+            this.btnCarregar.Size = new System.Drawing.Size(186, 25);
+            this.btnCarregar.TabIndex = 5;
+            this.btnCarregar.Text = "Carregar";
+            this.btnCarregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCarregar.Textcolor = System.Drawing.Color.White;
+            this.btnCarregar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarregar.Click += new System.EventHandler(this.btnCarregar_Click_1);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.btnLimpar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpar.BorderRadius = 0;
+            this.btnLimpar.ButtonText = "Limpar";
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLimpar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLimpar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Iconimage")));
+            this.btnLimpar.Iconimage_right = null;
+            this.btnLimpar.Iconimage_right_Selected = null;
+            this.btnLimpar.Iconimage_Selected = null;
+            this.btnLimpar.IconMarginLeft = 0;
+            this.btnLimpar.IconMarginRight = 0;
+            this.btnLimpar.IconRightVisible = true;
+            this.btnLimpar.IconRightZoom = 0D;
+            this.btnLimpar.IconVisible = true;
+            this.btnLimpar.IconZoom = 28D;
+            this.btnLimpar.IsTab = false;
+            this.btnLimpar.Location = new System.Drawing.Point(465, 131);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
+            this.btnLimpar.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btnLimpar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLimpar.selected = false;
+            this.btnLimpar.Size = new System.Drawing.Size(146, 25);
+            this.btnLimpar.TabIndex = 6;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLimpar.Textcolor = System.Drawing.Color.White;
+            this.btnLimpar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.DimGray;
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(408, 131);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(58, 18);
+            this.bunifuSeparator1.TabIndex = 7;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.DimGray;
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(608, 131);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Size = new System.Drawing.Size(65, 18);
+            this.bunifuSeparator2.TabIndex = 8;
+            this.bunifuSeparator2.Transparency = 255;
+            this.bunifuSeparator2.Vertical = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(680, 131);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(96, 39);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1049, 495);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.bunifuSeparator2);
+            this.Controls.Add(this.bunifuSeparator1);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnCarregar);
+            this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.dtGrid);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -582,7 +706,7 @@
             this.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "btnListar";
+            this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -595,17 +719,19 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private ns1.BunifuElipse bunifuElipse1;
+        private ns1.BunifuElipse formHome;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Panel panel1;
-        private ns1.BunifuFlatButton bntCadastrar;
+        private ns1.BunifuFlatButton btnCadastrar;
         private ns1.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ns1.BunifuFlatButton btnExcluir;
@@ -629,7 +755,12 @@
         private ns1.BunifuMaterialTextbox txtPlaca;
         private ns1.BunifuCustomDataGrid dtGrid;
         private ns1.BunifuFlatButton btnSair;
-        private System.Windows.Forms.Button button1;
+        private ns1.BunifuFlatButton btnCarregar;
+        private ns1.BunifuCustomLabel bunifuCustomLabel3;
+        private ns1.BunifuFlatButton btnLimpar;
+        private ns1.BunifuSeparator bunifuSeparator2;
+        private ns1.BunifuSeparator bunifuSeparator1;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
