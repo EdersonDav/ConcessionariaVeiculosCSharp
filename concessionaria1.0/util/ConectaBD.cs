@@ -14,7 +14,7 @@ namespace concessionaria1._0.util
         private static string serverName = "localhost";
         private static string port = "5432";
         private static string userName = "postgres";
-        private static string password = "2416";
+        private static string password = "";
         private static string dataBaseName = "dbveiculos";
 
         public NpgsqlConnection getConexao()
