@@ -58,6 +58,7 @@ namespace concessionaria1._0
 
                 //Mensagem para quando o cadastro é efetuado com sucesso
                 MessageBox.Show("Cadastrado com Sucesso!!");
+                dtGrid.DataSource = objVeiculo.Listar();
 
                 //Limpando os campos depois de cadastrar
                 txtPlaca.Text = "";
@@ -101,6 +102,7 @@ namespace concessionaria1._0
                     objVeiculo.Ano = int.Parse(txtAno.Text);
                     objVeiculo.Fabricante = txtFabricante.Text;
 
+                    objVeiculo.Alterar();
                     MessageBox.Show("Atualizado com Sucesso!!");
                     dtGrid.DataSource = objVeiculo.Listar();
 
@@ -142,6 +144,8 @@ namespace concessionaria1._0
                     txtPreco.Text = "";
                     txtAno.Text = "";
                     txtFabricante.Text = "";
+                    MessageBox.Show("Veiculo excluido com Sucesso!!");
+                    dtGrid.DataSource = objVeiculo.Listar();
 
                 }
                 catch (Exception ex)

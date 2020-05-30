@@ -129,7 +129,7 @@ namespace concessionaria1._0.modelo
                 int fabricante_id = fabricante.getId(this.Fabricante);
 
                 //String de comando SQL
-                string update = $"Update veiculo set placa = '{this.Placa}' ,modelo = '{this.Modelo}' ,ano = '{this.Ano}',preco_tabela = '{this.PrecoTabela}' id_fabricante ='{fabricante_id}' " +
+                string update = $"Update veiculo set placa = '{this.Placa}' ,modelo = '{this.Modelo}' ,ano = '{this.Ano}',preco_tabela = '{this.PrecoTabela}'" +
                              $"where codigo = '{this.ID}'";
 
                 NpgsqlCommand cmd = new NpgsqlCommand(update, conect);
