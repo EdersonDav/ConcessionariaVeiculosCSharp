@@ -66,6 +66,7 @@
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblid = new ns1.BunifuCustomLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnImagem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -354,6 +355,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.panel4.Controls.Add(this.lblid);
             this.panel4.Controls.Add(this.txtPreco);
             this.panel4.Controls.Add(this.txtAno);
             this.panel4.Controls.Add(this.txtModelo);
@@ -564,6 +566,7 @@
             this.dtGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtGrid.Size = new System.Drawing.Size(641, 231);
             this.dtGrid.TabIndex = 3;
+            this.dtGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGrid_CellClick);
             // 
             // bunifuCustomLabel3
             // 
@@ -688,6 +691,16 @@
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             // 
+            // lblid
+            // 
+            this.lblid.AutoSize = true;
+            this.lblid.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblid.Location = new System.Drawing.Point(3, 81);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(21, 17);
+            this.lblid.TabIndex = 16;
+            this.lblid.Text = "ID";
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -761,6 +774,7 @@
         private ns1.BunifuSeparator bunifuSeparator2;
         private ns1.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private ns1.BunifuCustomLabel lblid;
     }
 }
 

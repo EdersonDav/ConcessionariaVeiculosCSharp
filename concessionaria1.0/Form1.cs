@@ -13,6 +13,8 @@ namespace concessionaria1._0
 {
     public partial class Form1 : Form
     {
+        //instanciando um objeto do tipo veiculo para utilizar em todos os metodos
+        Veiculo objVeiculo = new Veiculo();
         public Form1()
         {
             InitializeComponent();
@@ -45,20 +47,24 @@ namespace concessionaria1._0
             moveSidePanel(btnCadastrar);
             try
             {
-                //instanciando um objeto do tipo veiculo para capturar as informações de cadastro e salvar no banco
-                Veiculo veiculo = new Veiculo();
-
                 //Capturando as informações de cadastro
-                veiculo.Placa = txtPlaca.Text;
-                veiculo.Modelo = txtModelo.Text;
-                veiculo.PrecoTabela = double.Parse(txtPreco.Text);
-                veiculo.Ano = int.Parse(txtAno.Text);
-                veiculo.Fabricante = txtFabricante.Text;
+                objVeiculo.Placa = txtPlaca.Text;
+                objVeiculo.Modelo = txtModelo.Text;
+                objVeiculo.PrecoTabela = double.Parse(txtPreco.Text);
+                objVeiculo.Ano = int.Parse(txtAno.Text);
+                objVeiculo.Fabricante = txtFabricante.Text;
 
-                veiculo.CadastrarVeiculo();
+                objVeiculo.CadastrarVeiculo();
 
                 //Mensagem para quando o cadastro é efetuado com sucesso
                 MessageBox.Show("Cadastrado com Sucesso!!");
+
+                //Limpando os campos depois de cadastrar
+                txtPlaca.Text = "";
+                txtModelo.Text = "";
+                txtPreco.Text = "";
+                txtAno.Text = "";
+                txtFabricante.Text = "";
             }
             catch (Exception ex)
             {
@@ -68,7 +74,7 @@ namespace concessionaria1._0
 
         private void btnCarregar_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtPlaca_OnValueChanged(object sender, EventArgs e)
@@ -79,12 +85,71 @@ namespace concessionaria1._0
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnAtualizar);
+            //Se o texto do lbl id for igual a ID é pq o usuario não clicou em nenhum item da grid para atualizar
+            if (lblid.Text == "ID")
+            {
+                MessageBox.Show("Por favor clicar em carregar e selecionar um veiculo da view para ser feita a atualização");
+            }
+            else
+            {
+                try
+                {
+                    objVeiculo.ID = Convert.ToInt32(lblid.Text);
+                    objVeiculo.Placa = txtPlaca.Text;
+                    objVeiculo.Modelo = txtModelo.Text;
+                    objVeiculo.PrecoTabela = double.Parse(txtPreco.Text);
+                    objVeiculo.Ano = int.Parse(txtAno.Text);
+                    objVeiculo.Fabricante = txtFabricante.Text;
+
+                    MessageBox.Show("Atualizado com Sucesso!!");
+                    dtGrid.DataSource = objVeiculo.Listar();
+
+                    //Limpando os campos depois de cadastrar
+                    txtPlaca.Text = "";
+                    txtModelo.Text = "";
+                    txtPreco.Text = "";
+                    txtAno.Text = "";
+                    txtFabricante.Text = "";
+
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Erro ao cadastrar. " + ex.Message);
+                }
+            }
+            
 
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnExcluir);
+            //Se o texto do lbl id for igual a ID é pq o usuario não clicou em nenhum item da grid para atualizar
+            if (lblid.Text == "ID")
+            {
+                MessageBox.Show("Por favor clicar em carregar e selecionar um veiculo da view para ser feita a atualização");
+            }
+            else
+            {
+                try
+                {
+                    objVeiculo.ID = Convert.ToInt32(lblid.Text);
+                    objVeiculo.Excluir();
+
+                    //Limpando os campos depois de cadastrar
+                    txtPlaca.Text = "";
+                    txtModelo.Text = "";
+                    txtPreco.Text = "";
+                    txtAno.Text = "";
+                    txtFabricante.Text = "";
+
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Erro ao cadastrar. " + ex.Message);
+                }
+                
+            }
 
         }
 
@@ -101,18 +166,28 @@ namespace concessionaria1._0
 
         private void btnCarregar_Click_1(object sender, EventArgs e)
         {
-            Veiculo objVeiculo = new Veiculo();
 
             dtGrid.DataSource = objVeiculo.Listar();
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            
+
             for (int i = 0; i < dtGrid.RowCount; i++)
             {
                 dtGrid.Rows[i].DataGridView.Columns.Clear();
             }
+        }
+
+        private void dtGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Colocando valores da grid nos campos
+            lblid.Text = txtPlaca.Text = dtGrid.CurrentRow.Cells[0].Value.ToString();
+            txtPlaca.Text = dtGrid.CurrentRow.Cells[1].Value.ToString();
+            txtModelo.Text = dtGrid.CurrentRow.Cells[3].Value.ToString();
+            txtPreco.Text = dtGrid.CurrentRow.Cells[5].Value.ToString();
+            txtAno.Text = dtGrid.CurrentRow.Cells[4].Value.ToString();
+            txtFabricante.Text = dtGrid.CurrentRow.Cells[2].Value.ToString();
         }
     }
 }

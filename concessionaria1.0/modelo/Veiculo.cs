@@ -75,7 +75,7 @@ namespace concessionaria1._0.modelo
             {
                 // Strinsg de comando para selecionar o id do fabricante
                 string select = "Select veiculo.codigo, veiculo.placa, veiculo.modelo, veiculo.ano, veiculo.preco_tabela, fabricante.nome " +
-                                "from veiculo, fabricante "+
+                                "from veiculo, fabricante " +
                                 "Where veiculo.id_fabricante = fabricante.codigo";
 
                 //Cria o comando passando a string e as informações de conexão
@@ -112,13 +112,67 @@ namespace concessionaria1._0.modelo
             finally
             {
                 //Fecha conexão
-                if(conect != null){
+                if (conect != null)
+                {
                     conect.Close();
                 }
-                
+
             }
         }
+        public void Alterar()
+        {
+            NpgsqlConnection conect = new ConectaBD().getConexao();
+            try
+            {
+                //chamada do metodo que retorna o id do fabricante
+                Fabricante fabricante = new Fabricante();
+                int fabricante_id = fabricante.getId(this.Fabricante);
 
+                //String de comando SQL
+                string update = $"Update veiculo set placa = '{this.Placa}' ,modelo = '{this.Modelo}' ,ano = '{this.Ano}',preco_tabela = '{this.PrecoTabela}' id_fabricante ='{fabricante_id}' " +
+                             $"where codigo = '{this.ID}'";
+
+                NpgsqlCommand cmd = new NpgsqlCommand(update, conect);
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            finally
+            {
+                //Fecha conexão
+                if (conect != null)
+                {
+                    conect.Close();
+                }
+            }
+        }
+        public void Excluir()
+        {
+            NpgsqlConnection conexao = new ConectaBD().getConexao();
+            try
+            {
+                string sql = $"DELETE from veiculo  where codigo = '{this.ID}'";
+
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
+
+                cmd.ExecuteNonQuery();
+
+
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
 
     }
 }
